@@ -1,0 +1,27 @@
+{
+    'TEAM': 'SISO_CRT',
+    'TL1': {
+       'HOST_IP':  '10.42.184.26',
+       'FR': {'F7144435952': {'pdu': {'type': 'ATEN', 'ip_addr': '10.42.168.51', 'port': 1},#FRHC
+                              'fiber_length': {'physical_port0': 17, 'physical_port1': 1, 'delta': 30},
+                              'link_proto': 'O3',
+                              'feg_without_mha': 30,
+                              'chain': '1.1.1.1',
+                              'qc': {'hw_config': '#3616_O_1g2e'}},
+              'L9103000284': {'pdu': {'type': 'ATEN', 'ip_addr': '10.42.168.52', 'port': 5},  # FRHA
+                               'fiber_length': {'physical_port0': 17, 'physical_port1': 1, 'delta': 30},
+                               'link_proto': 'O3',
+                               'feg_without_mha': 30,
+                               'chain': '1.1.1.1',
+                               'qc': {'hw_config': '#3616_O_1g2e'}}
+              },
+       'FSM':  {'L1174805093': {'pdu': {'type': 'ATEN', 'ip_addr': '10.42.168.51', 'port': 2}}
+          },
+       'EC':   {'L1163617187': {'pdu': {'type': 'ATEN', 'ip_addr': '10.42.168.51', 'port': 2}}
+          }
+
+    }
+}
+
+
+
