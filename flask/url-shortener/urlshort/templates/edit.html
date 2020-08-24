@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block title %}URL shortener editor{% endblock %}
+
+{% block main %}
+
+<h1>URL Shortener editor</h1>
+
+{% if codes %}
+
+<form action="dupa" method="post">
+    <label for="shorten">List of shortens</label>
+    <input list="shorten" name="shorten" value="" required>
+        <datalist id="shorten">
+            <ul>
+                 {% for items in codes %}
+                      <option value={{ items }}>
+                 {% endfor %}
+            </ul>
+        </datalist>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+{% endif %}
+
+
+  {% if not codes %}
+  <h2> You haven't created any codes </h2>
+  {% endif %}
+
+{% endblock %}
