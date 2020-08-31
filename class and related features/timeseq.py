@@ -1,31 +1,39 @@
-import sys, timer_lib
+import sys, timer_lib, time
 reps = 10000
 replist = range(reps)
 
+
 def forLoop():
-    res=[]
+    res = []
     for x in replist:
-        res.append(abs(x))
+        res.append(x+10)
     return res
 
+
 def listComp():
-    return [abs(x) for xi in replist]
+    return [x + 10 for x in replist]
+
 
 def mapCall():
-    return list(map(abs, replist))
+    return list(map(lambda x: x + 10, replist))
+
 
 def genExpr():
-    return list(abs(x) for x in replist)
+    return list(x + 10 for x in replist)
+
 
 def genFunc():
     def gen():
         for x in replist:
-            yield  abs(x)
+            yield  x + 10
     return list(gen())
 
-print(sys.version)
-for test in (forLoop(), listComp(), mapCall(), genExpr(), genFunc()):
-    elapsed, result = timer_lib.timer(test)
-    print('-', * 33)
-    print('%-9s: %.5f => [%s...%s]' %
-          (test.__name__, elapsed, result[0], result[-1]))
+
+if __name__ == '__main__':
+    print(sys.version)
+    for test in (forLoop, listComp, mapCall, genExpr, genFunc):
+        time.sleep(0.1)
+        elapsed, result = timer_lib.timer(test)
+        print('-' * 33)
+        print('%-9s: %.5f => [%s...%s]' %
+              (test.__name__, elapsed, result[0], result[-1]))
