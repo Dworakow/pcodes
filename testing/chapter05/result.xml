@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite errors="0" failures="0" name="pytest" skipped="0" tests="3" time="0.053">
+    <testcase classname="test_module08" file="test_module08.py" line="13" name="test_case01" time="0.005"></testcase>
+    <testcase classname="test_module08.TestClass08" file="test_module08.py" line="19" name="test_case01" time="0.009"></testcase>
+    <testcase classname="test_module08.TestClass08" file="test_module08.py" line="23" name="test_case02" time="0.004"></testcase>
+</testsuite>
